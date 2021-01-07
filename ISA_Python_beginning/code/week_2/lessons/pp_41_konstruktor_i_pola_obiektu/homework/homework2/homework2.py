@@ -56,6 +56,8 @@ def print_order(order):
     for product in order.product_list:
         print("\t", end="")
         print_product(product)
+        print("=" * 20)
+        print()
 
 
 def run():
