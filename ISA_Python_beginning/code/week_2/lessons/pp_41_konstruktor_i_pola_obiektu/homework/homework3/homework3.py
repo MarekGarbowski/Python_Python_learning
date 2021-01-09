@@ -1,8 +1,8 @@
-# #
-# # # Napisz funkcję wypisującą produkt i zamówienie.
-# # # Podczas wypisywania zamówienia skorzystaj z wypisywania produktu.
-# #
-# #
+# # Napisz funkcję generującą zamówienie z losową listą produktów na przykład: Produkt-1, Produkt-2 itd
+#
+# import random
+#
+#
 # class Product:
 #     def __init__(self, name, category_name, price_per_unit):
 #         self.name = name
@@ -61,16 +61,32 @@
 #
 #
 # def run():
-#     green_apple = Apple("green", "medium", 5.5)
-#     yellow_potato = Potatoes("yellow", "small", 3.7)
-#     fresh_potato = Potatoes("fresh", "big", 5)
-#     candy = Product("sweets", "food", 23)
-#     new_order = Order("Marek Garbowski", [candy])
-#     print_apple(green_apple)
-#     print_potato(yellow_potato)
-#     print_potato(fresh_potato)
-#     print_product(candy)
+#     new_order = create_order_list()
 #     print_order(new_order)
+#     # green_apple = Apple("green", "medium", 5.5)
+#     # yellow_potato = Potatoes("yellow", "small", 3.7)
+#     # fresh_potato = Potatoes("fresh", "big", 5)
+#     # candy = Product("sweets", "food", 23)
+#     # new_order = Order("Marek Garbowski", [candy])
+#     # print_apple(green_apple)
+#     # print_potato(yellow_potato)
+#     # print_potato(fresh_potato)
+#     # print_product(candy)
+#     # print_order(new_order)
+#
+#
+# def create_order_list():
+#     number_of_products = random.randint(1, 10)
+#     products = []
+#     for product_number in range(number_of_products):
+#         product_name = f"Produkt-{product_number}"
+#         category_name = "inne"
+#         unit_price = random.randint(1, 100)
+#         product = Product(product_name, category_name, unit_price)
+#         products.append(product)
+#
+#     order = Order(full_name="Marek", product_list=products)
+#     return order
 #
 #
 # if __name__ == "__main__":
